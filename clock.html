@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Document</title>
+</head>
+<body>
+   <main>
+      <header>
+         <nav>
+            <ul class="nav-list">
+               <li><a class="nav-links" href="">Relógio</a></li>
+               <li><a class="nav-links" href="">Cronometro</a></li>
+               <li><a class="nav-links" href="">Calculadora</a></li>
+            </ul>
+         </nav>
+      </header>
+      <section class="home">
+         <div class="home-content">
+            
+            <div class="clock">
+               <div class="item-title">
+                  <h1>Stopwatch</h1>
+               </div>
+               <div class="item-value" id=""> <!-- teste -->
+                  <div>
+                     <p id="stopwatch">00:00</p>
+                  </div>
+               </div>
+               <div class="item-menu">
+                  <button onclick="play()">Play</button>
+                  <button onclick="stop()">Stop</button>
+               </div>
+            </div>
+
+            <div class="clock">
+               <div class="item-title">
+                  <h1>Resin Timer</h1>
+               </div>
+               <div class="item-value"> <!-- teste -->
+                  <div>
+                     <p>
+                        <span id="resina-atual">
+                           0
+                        </span>
+                         / 160
+                     </p>
+                  </div>
+                  <h6 id="timer-resina">08:00</h6>
+                  <!-- span no x -->
+                  <h6 id="time-to-full">Full in X hours</h6>
+                  <h6 id="date-when-full">Sync your resin</h6>
+               </div>
+               <div class="item-menu">
+                  <button onclick="spend(20)">-20</button>
+                  <button onclick="spend(40)">-40</button>
+                  <div class="sync">
+                     <!-- mudar pra form e deixar required -->
+                     <input type="number" placeholder="Resin" id="resin-input-value">
+                     <input type="number" placeholder="disabled" id="resin-input-time">
+                     <button onclick="sync()">Sync</button>
+                  </div>
+               </div>
+            </div>
+
+            <div class="clock">
+               <div class="item-title">
+                  <h1>Relógio do server</h1>
+               </div>
+               <div class="item-value"> <!-- teste -->
+                  <div>
+                     <p id="server-time">04:00</p>
+                  </div>
+               </div>
+               <div class="item-menu">
+                  <button onclick="addNewClock()">New</button>
+               </div>
+            </div>
+         </div>
+      </section>
+      <footer>Footer</footer>
+   </main>
+   <script src="script.js"></script>
+</body>
+</html>
